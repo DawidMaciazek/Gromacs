@@ -1,0 +1,98 @@
+
+  C1
+   \
+    C2
+    |
+    C3
+   //\
+   O  NH
+      |
+      C4
+     / \
+    C5 C6
+
+// Grupa C1 C2 łańcucha głównego
+// Przy ketonowym tlenie (opls_280) jest napisane żeby dla alpha C stosować 135-139 - alkane CH(1,2,3,4)
+
+// Dla pierwszego meru:
+C1H(3)
+ \    ...
+  \   /
+    C2H(1)
+    |
+    R
+
+C1 -     opls_135       # -0.180
+C2 -     opls_137       # -0.060 
+H  -     opls_140       #  0.06
+
+// Dla wewnęrznych merów:
+    C1(H2) 
+   / \  ...
+...   \ /
+      C2(H1)
+       |
+       R
+
+C1 -     opls_136      # -0.120
+C2 -     opls_137      # -0.060
+H  -     opls_140      #  0.060
+
+// Dla końcowego meru:
+   C1(H2)
+  / \
+...  C2(H2)
+     |
+     R
+
+C1 -    opls_136
+C2 -    opls_136
+H  -    opls_140  
+
+
+// Grupa NH: drugorzedowa amina (secondary amde)
+
+// wyszukiwania:
+./atomtypes.atp: opls_229   12.01100  ; C on N: secondary N-CHR2 amide   // !!! ten wyglada sensownie dla "dolnego wegla"
+./atomtypes.atp: opls_230   12.01100  ; C on N: secondary N-CR3  amide
+./atomtypes.atp: opls_238   14.00670  ; N: secondary amide, peptide bond (see #279 for formyl H)  // !!! AZOT w łańcuchu wygląda jak wiązanie peptydowe
+./atomtypes.atp: opls_241    1.00800  ; H on N: secondary amide             // !!! WODOR dla azotu
+./atomtypes.atp: opls_242   12.01100  ; C on N: secondary N-Me amide
+./atomtypes.atp: opls_244   12.01100  ; C on N: secondary N-CH2R amide
+./atomtypes.atp: opls_480   14.00670  ; N secondary amide of sulfonamide    // SIARKA - nie interesuje nas
+./atomtypes.atp: opls_481    1.00800  ; H on N: secondary sulfonamide       // SIARKA - nie interesuje nas
+
+// Sensowne wyniki:
+
+C3 -       opls_131      # 0.500
+N -        opls_238      # -0.500
+H przy N - opls_241      # 0.300
+C4 -       opls_229      # 0.140
+H przy C4  opls_140      # 0.060  // na przykładzie LEU
+
+
+// Grupa metylowa:
+
+C5/C6        - opls_135  # -0.180
+H przy C5/C6 - opls_140  #  0.060
+
+
+// Grupa karboskyslowa aminy (carbonyl amide)
+
+// wyszukiwania:
+./atomtypes.atp: opls_131   12.01100  ; C in C=O for UA formamide, DMF. // !!! wegiel podlaczony do N i =O
+./atomtypes.atp: opls_234   12.01100  ; C: C=O in benzamide
+./atomtypes.atp: opls_235   12.01100  ; C=O in amide, dmf, peptide bond
+./atomtypes.atp: opls_236   15.99940  ; O: C=O in amide.   Acyl R on C in amide is neutral - 
+./atomtypes.atp: opls_474   32.06000  ; S in sulfonamide, S(=O)2(OR)
+./atomtypes.atp: opls_475   15.99940  ; O in sulfonamide, S(=O)2(OR)
+./atomtypes.atp: opls_484   12.01100  ; alpha CH2-N of sulfonamide. Use q=0.45 for CRH-N, q=0.65 for O=N-C-CH-N.
+
+// Sensowne propozcje:
+O= -        opls_236   # -0.500
+C3 -        opls_131
+
+
+// !!! ALBO KETONOWY TLEN (ale nie ma nic o N)
+O= -        opls_281
+C3 -        opls_280
