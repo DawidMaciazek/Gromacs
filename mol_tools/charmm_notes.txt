@@ -1,0 +1,93 @@
+
+Main chain start
+
+
+# main mer
+   continous          |      end
+                      | 
+    Ca(H*2)   --      |    Ca(H*2)
+    / \  /            |   /  \   
+  --   Cb (H)         | --    Cb (H*2)
+       |
+       Cc
+      //\
+     O   N (H)
+         |
+         Cd (H)
+        / \
+  (H*3) Ce  Cf (H*3)
+
+
+---- continous mer
+
+Ca       CT2  -0.18
+Ha1      HA    0.09
+Ha2      HA    0.09
+
+Cb       CT1  -0.09
+Hb1      HA    0.09
+
+--- end mer 
+
+Ca       CT2  -0.18
+Ha1      HA    0.09
+Ha2      HA    0.09
+
+Cb       CT2  -0.09
+Hb1      HA    0.09
+Hb1      HA    0.09
+
+---
+
+Cc       CN1A  0.55
+
+O        ON1  -0.55
+
+N        NH1  -0.47
+Hn       H     0.31
+
+Cd       CT1   0.07 
+Hd       H     0.09
+
+ce       CT3  -0.27
+he1      HA    0.09
+he2      HA    0.09
+he3      HA    0.09
+
+cf       CT3  -0.27
+hf1      HA    0.09
+hf2      HA    0.09
+hf3      HA    0.09
+
+
+Start mer
+
+
+
+              Si
+            / |  \
+(H*3)Ca - Oa  |   Ob - Cb (H*3)
+	      Oc
+              |
+              Cc (H*2)
+              |
+              Cd (H*2)
+              |
+              Ce (H*2)
+              |
+              N (H)
+              |
+              Cf 
+            //  \
+           Od    Cg (H*1) - Ch (H*3)
+                 |
+                 |
+              norma-mers 
+
+
+
+Si  ??   ??
+Oa	OS  ??
+Cb	
+
+
